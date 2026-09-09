@@ -10,3 +10,22 @@ dialog{border:0;border-radius:18px;padding:0;max-width:580px;width:calc(100% - 2
 @media(max-width:700px){.sidebar{transform:translateX(-100%);width:244px;transition:transform .2s;box-shadow:12px 0 50px #10275a20}.sidebar.open{transform:translateX(0)}.main{margin-left:0}.mobile-toggle{display:grid}.topbar{height:69px;padding:0 16px}.breadcrumb{display:none}.topbar .user-label{display:none}.content{padding:24px 16px}.page-heading{gap:16px;align-items:flex-start}.page-heading h1{font-size:25px}.page-heading>.flex{gap:7px}.page-heading .btn{padding:10px}.page-heading .btn span{display:none}.welcome{padding:23px}.welcome h2{font-size:21px}.stats{gap:10px}.stat{padding:15px}.stat-top{font-size:11px}.stat-value{font-size:28px}.dashboard-grid>aside{display:flex;flex-direction:column}.department-grid{grid-template-columns:1fr}.department{display:block}.cards{grid-template-columns:1fr}.backup-grid{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.login{grid-template-columns:1fr}.login-story{display:none}.login-form-wrap{min-height:100vh;padding:30px 24px}.login-form .brand{margin-bottom:44px}.panel-head{padding:19px}.panel-body{padding:0 19px 19px}.welcome .btn{display:none}.demo-banner{font-size:10px;flex-wrap:wrap;gap:6px}.toolbar .search{max-width:100%}.schedule{padding:15px}.modal-body{padding:20px}.modal-header{padding:20px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 
+
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.language-control{position:absolute;top:20px;right:24px;z-index:30}
+.language-control select{width:auto;min-width:104px;padding:8px 28px 8px 11px;border-radius:8px;background:#fff;border:1px solid var(--line);font-size:12px;font-weight:650;color:var(--ink)}
+.topbar .language-control{position:static;order:-1;margin-right:8px}
+html[dir="rtl"] body{font-family:Tahoma,"Segoe UI",Arial,sans-serif}
+html[dir="rtl"] h1,html[dir="rtl"] h2,html[dir="rtl"] h3,html[dir="rtl"] h4{font-family:Tahoma,"Segoe UI",Arial,sans-serif;letter-spacing:0}
+html[dir="rtl"] .sidebar{inset:0 0 0 auto;border-right:0;border-left:1px solid var(--line)}
+html[dir="rtl"] .main{margin-left:0;margin-right:244px}
+html[dir="rtl"] .nav-item,html[dir="rtl"] table{text-align:right}
+html[dir="rtl"] .nav-item .count{margin-left:0;margin-right:auto}
+html[dir="rtl"] .search svg{left:auto;right:12px}
+html[dir="rtl"] .search input{padding-left:12px;padding-right:37px}
+html[dir="rtl"] .lesson{border-left:0;border-right:3px solid var(--blue)}
+html[dir="rtl"] .language-control{right:auto;left:24px}
+html[dir="rtl"] .topbar .language-control{margin-right:0;margin-left:8px}
+@media(max-width:1200px){html[dir="rtl"] .main{margin-right:215px}}
+@media(max-width:700px){.language-control{top:16px;right:16px}.login-form-wrap .language-control{position:fixed}.topbar .language-control{position:static}html[dir="rtl"] .sidebar{right:0;left:auto;transform:translateX(100%)}html[dir="rtl"] .sidebar.open{transform:translateX(0)}html[dir="rtl"] .main{margin-right:0}html[dir="rtl"] .language-control{left:16px;right:auto}}
+

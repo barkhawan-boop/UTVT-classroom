@@ -227,3 +227,126 @@ if(document.modelContext?.registerTool){
 await boot();
 
 
+
+const UTVT_TRANSLATIONS = {
+  ar: {
+    "Student marks":"درجات الطلاب","WELCOME TO YOUR WORKSPACE":"مرحبًا بك في مساحة العمل",
+    "SET UP YOUR CAMPUS":"إعداد مؤسستك","Good to see you again.":"سعيدون برؤيتك مجددًا.",
+    "Your campus starts here.":"تبدأ مؤسستك من هنا.","Sign in with the account provided by your administrator.":"سجّل الدخول بالحساب الذي أنشأه المسؤول.",
+    "Create the first administrator account using your private setup key.":"أنشئ أول حساب مسؤول باستخدام مفتاح الإعداد الخاص.",
+    "Private setup key":"مفتاح الإعداد الخاص","Administrator full name":"الاسم الكامل للمسؤول","Username":"اسم المستخدم","Password":"كلمة المرور",
+    "Your full name":"اسمك الكامل","At least 12 characters":"12 حرفًا على الأقل","Create administrator account":"إنشاء حساب المسؤول",
+    "Sign in to your workspace":"تسجيل الدخول إلى مساحة العمل","TAKE A LOOK AROUND":"استكشف النظام","Explore the sample workspace":"استكشف مساحة العمل التجريبية",
+    "Need access? Contact your department administrator.":"تحتاج إلى صلاحية؟ تواصل مع مسؤول القسم.","Overview":"نظرة عامة","People":"المستخدمون",
+    "Departments & classes":"الأقسام والصفوف","Curricula":"المناهج","Timetable":"الجدول الدراسي","Marks & approvals":"الدرجات والموافقات",
+    "Marks submissions":"تسليم الدرجات","My marks":"درجاتي","Learning materials":"المواد التعليمية","Backup & restore":"نسخ احتياطي واستعادة",
+    "My classes":"صفوفي","My timetable":"جدولي الدراسي","My workspace":"مساحة عملي","Administration":"الإدارة",
+    "Account settings":"إعدادات الحساب","Sign out":"تسجيل الخروج","Workspace":"مساحة العمل","Welcome back,":"مرحبًا بعودتك،",
+    "A clear view of your academic workspace.":"عرض واضح لمساحة عملك التعليمية.","CAMPUS AT A GLANCE":"نظرة على المؤسسة",
+    "YOUR TEACHING WORKSPACE":"مساحة عملك للتدريس","YOUR LEARNING WORKSPACE":"مساحة عملك للتعلّم",
+    "Add user":"إضافة مستخدم","Export data":"تصدير البيانات","Submit marks":"إرسال الدرجات","Join class":"الانضمام إلى صف",
+    "Total students":"إجمالي الطلاب","Teaching staff":"هيئة التدريس","Active classes":"الصفوف النشطة","Awaiting review":"بانتظار المراجعة",
+    "My classes":"صفوفي","Learning materials":"المواد التعليمية","Published lessons":"الدروس المنشورة","Weekly lessons":"الدروس الأسبوعية",
+    "Every lesson counts.":"كل درس مهم.","Make room for progress.":"افتح المجال للتقدم.",
+    "Quick actions":"إجراءات سريعة","Recent activity":"النشاط الأخير","Up next this week":"القادم هذا الأسبوع",
+    "You control what is shared":"أنت تتحكم بما يتم نشره","Everything in one place":"كل شيء في مكان واحد",
+    "View all":"عرض الكل","Open my classes":"فتح صفوفي","Manage approvals":"إدارة الموافقات",
+    "Create accounts, manage access and control mark visibility.":"أنشئ الحسابات وأدر الصلاحيات والتحكم في ظهور الدرجات.",
+    "Search by name or username":"ابحث بالاسم أو اسم المستخدم","All roles":"كل الأدوار","Students":"الطلاب","Teachers":"المعلمون","Administrators":"المسؤولون",
+    "Create a class":"إنشاء صف","Add department":"إضافة قسم","Add stage":"إضافة مرحلة","Academic structure":"الهيكل الأكاديمي",
+    "Class code":"رمز الصف","Open class":"فتح الصف","No classes yet":"لا توجد صفوف بعد","No matching people":"لا يوجد مستخدمون مطابقون",
+    "Add curriculum":"إضافة منهج","Assign teacher":"تعيين معلم","Teaching assignments":"تكليفات التدريس",
+    "Schedule lesson":"جدولة درس","Weekly schedule":"الجدول الأسبوعي","All times are campus local time.":"جميع الأوقات حسب توقيت المؤسسة.",
+    "Your personal lesson results, published by administration.":"نتائج دروسك الشخصية المنشورة من الإدارة.",
+    "Review teacher submissions and release results to students.":"راجع تسليمات المعلمين وانشر النتائج للطلاب.",
+    "Upload lesson results for administrator review.":"ارفع نتائج الدروس لمراجعة الإدارة.",
+    "Documents and resources shared with your classrooms.":"المستندات والموارد المشتركة مع صفوفك.","Share material":"مشاركة مادة",
+    "Download full backup":"تنزيل النسخة الاحتياطية الكاملة","Choose backup ZIP":"اختيار ملف النسخة الاحتياطية",
+    "Change password":"تغيير كلمة المرور","Current password":"كلمة المرور الحالية","New password":"كلمة المرور الجديدة",
+    "Confirm new password":"تأكيد كلمة المرور الجديدة","Cancel":"إلغاء","Save account":"حفظ الحساب","Create account":"إنشاء حساب",
+    "Delete account":"حذف الحساب","Reset password":"إعادة تعيين كلمة المرور","Active":"نشط","Inactive":"غير نشط",
+    "Visible after publication":"ظاهر بعد النشر","Hidden — tuition hold":"مخفي — تعليق الرسوم",
+    "Class and curriculum":"الصف والمنهج","Lesson number":"رقم الدرس","Lesson title":"عنوان الدرس",
+    "Download Excel template":"تنزيل قالب Excel","Submit to administrator":"إرسال إلى الإدارة",
+    "Upload a learning material":"رفع مادة تعليمية","Material title":"عنوان المادة","Download":"تنزيل","Remove":"إزالة",
+    "Create your own password":"أنشئ كلمة مرور خاصة بك","Overview":"نظرة عامة","English":"English","Kurdish":"کوردی","Arabic":"العربية"
+  },
+  ku: {
+    "Student marks":"نمرەکانی خوێندکاران","WELCOME TO YOUR WORKSPACE":"بەخێربێیت بۆ شوێنی کارەکەت",
+    "SET UP YOUR CAMPUS":"دامەزراندنی پەیمانگاکەت","Good to see you again.":"خۆشحاڵین بە دووبارە بینینت.",
+    "Your campus starts here.":"پەیمانگاکەت لێرە دەست پێدەکات.","Sign in with the account provided by your administrator.":"بە هەژمارەکەی بەڕێوەبەر بچۆ ژوورەوە.",
+    "Create the first administrator account using your private setup key.":"یەکەم هەژماری بەڕێوەبەر بە کلیلە تایبەتەکەت دروست بکە.",
+    "Private setup key":"کلیلە تایبەتی ڕێکخستن","Administrator full name":"ناوی تەواوی بەڕێوەبەر","Username":"ناوی بەکارهێنەر","Password":"وشەی نهێنی",
+    "Your full name":"ناوی تەواوت","At least 12 characters":"لانیکەم ١٢ پیت","Create administrator account":"دروستکردنی هەژماری بەڕێوەبەر",
+    "Sign in to your workspace":"چوونەژوورەوە بۆ شوێنی کار","TAKE A LOOK AROUND":"گەڕان بە ناوەوە","Explore the sample workspace":"شوێنی کاری نموونە ببینە",
+    "Need access? Contact your department administrator.":"دەستگەیشتن دەوێت؟ پەیوەندی بە بەڕێوەبەری بەشەکەت بکە.","Overview":"پوختە","People":"بەکارهێنەران",
+    "Departments & classes":"بەشەکان و پۆلەکان","Curricula":"پڕۆگرامەکانی خوێندن","Timetable":"خشتەی کات","Marks & approvals":"نمرەکان و پەسەندکردن",
+    "Marks submissions":"ناردنی نمرەکان","My marks":"نمرەکانم","Learning materials":"ماددەکانی فێربوون","Backup & restore":"پاڵپشتی و گەڕاندنەوە",
+    "My classes":"پۆلەکانم","My timetable":"خشتەی کاتم","My workspace":"شوێنی کارم","Administration":"بەڕێوەبردن",
+    "Account settings":"ڕێکخستنەکانی هەژمار","Sign out":"چوونەدەرەوە","Workspace":"شوێنی کار","Welcome back,":"بەخێربێیتەوە،",
+    "A clear view of your academic workspace.":"بینینێکی ڕوون بۆ شوێنی کاری خوێندنی تۆ.","CAMPUS AT A GLANCE":"پەیمانگا لە یەک نیگا",
+    "YOUR TEACHING WORKSPACE":"شوێنی کاری وانەوتن","YOUR LEARNING WORKSPACE":"شوێنی کاری فێربوون",
+    "Add user":"بەکارهێنەر زیاد بکە","Export data":"داتا هەناردە بکە","Submit marks":"نمرەکان بنێرە","Join class":"بچۆ پۆلێکەوە",
+    "Total students":"کۆی خوێندکاران","Teaching staff":"ستافی وانەوتن","Active classes":"پۆلە چالاکەکان","Awaiting review":"چاوەڕێی پێداچوونەوە",
+    "Learning materials":"ماددەکانی فێربوون","Published lessons":"وانە بڵاوکراوەکان","Weekly lessons":"وانەکانی هەفتانە",
+    "Every lesson counts.":"هەموو وانەیەک گرنگە.","Make room for progress.":"شوێن بۆ پێشکەوتن بکەوە.",
+    "Quick actions":"کردارە خێراکان","Recent activity":"چالاکییەکانی دواوە","Up next this week":"ئەم هەفتەیە داهاتوو",
+    "You control what is shared":"تۆ کۆنترۆڵی بڵاوکردنەوە دەکەیت","Everything in one place":"هەموو شتێک لە یەک شوێن",
+    "View all":"هەمووی ببینە","Open my classes":"پۆلەکانم بکەرەوە","Manage approvals":"پەسەندکردنەکان بەڕێوەببە",
+    "Create accounts, manage access and control mark visibility.":"هەژمار دروست بکە، دەستگەیشتن بەڕێوەببە و دەربڕینی نمرە کۆنترۆڵ بکە.",
+    "Search by name or username":"بە ناو یان ناوی بەکارهێنەر بگەڕێ","All roles":"هەموو ڕۆڵەکان","Students":"خوێندکاران","Teachers":"مامۆستایان","Administrators":"بەڕێوەبەران",
+    "Create a class":"پۆل دروست بکە","Add department":"بەش زیاد بکە","Add stage":"قۆناغ زیاد بکە","Academic structure":"پێکهاتەی ئەکادیمی",
+    "Class code":"کۆدی پۆل","Open class":"پۆل بکەرەوە","No classes yet":"هێشتا پۆلێک نییە","No matching people":"هیچ بەکارهێنەرێکی هاوشێوە نییە",
+    "Add curriculum":"پڕۆگرام زیاد بکە","Assign teacher":"مامۆستا دیاری بکە","Teaching assignments":"دیاریکردنی وانەوتن",
+    "Schedule lesson":"وانە ڕێکبخە","Weekly schedule":"خشتەی هەفتانە","All times are campus local time.":"هەموو کاتەکان بە کاتی ناوخۆی پەیمانگان.",
+    "Your personal lesson results, published by administration.":"ئەنجامە تایبەتییەکانی وانەکانت کە لەلایەن بەڕێوەبردنەوە بڵاوکراونەتەوە.",
+    "Review teacher submissions and release results to students.":"ناردراوەکانی مامۆستایان پێداچوونەوە بکە و ئەنجامەکان بۆ خوێندکاران بڵاو بکەرەوە.",
+    "Upload lesson results for administrator review.":"ئەنجامەکانی وانە بۆ پێداچوونەوەی بەڕێوەبەر باربکە.",
+    "Documents and resources shared with your classrooms.":"بەڵگەنامە و سەرچاوە هاوبەشکراوەکان لەگەڵ پۆلەکانت.","Share material":"ماددە هاوبەش بکە",
+    "Download full backup":"پاڵپشتی تەواو دابەزێنە","Choose backup ZIP":"فایلی پاڵپشتی هەڵبژێرە",
+    "Change password":"وشەی نهێنی بگۆڕە","Current password":"وشەی نهێنی ئێستا","New password":"وشەی نهێنی نوێ",
+    "Confirm new password":"وشەی نهێنی نوێ دڵنیابکەرەوە","Cancel":"پاشگەزبوونەوە","Save account":"هەژمار پاشەکەوت بکە","Create account":"هەژمار دروست بکە",
+    "Delete account":"هەژمار بسڕەوە","Reset password":"وشەی نهێنی نوێ بکەرەوە","Active":"چالاک","Inactive":"ناچالاک",
+    "Visible after publication":"دوای بڵاوکردنەوە دیارە","Hidden — tuition hold":"شاراوە — وەستاندنی کرێی خوێندن",
+    "Class and curriculum":"پۆل و پڕۆگرام","Lesson number":"ژمارەی وانە","Lesson title":"ناونیشانی وانە",
+    "Download Excel template":"قاڵبی Excel دابەزێنە","Submit to administrator":"بۆ بەڕێوەبەر بینێرە",
+    "Material title":"ناونیشانی ماددە","Download":"دابەزاندن","Remove":"لابردن",
+    "Create your own password":"وشەی نهێنی خۆت دروست بکە","English":"English","Kurdish":"کوردی","Arabic":"العربية"
+  }
+};
+let utvtLanguage = (()=>{try{return localStorage.getItem('utvt-language')||'en';}catch{return 'en';}})();
+function translateUTVT(){
+  const dictionary=UTVT_TRANSLATIONS[utvtLanguage]||{};
+  document.documentElement.lang=utvtLanguage==='ku'?'ckb':utvtLanguage;
+  document.documentElement.dir=utvtLanguage==='en'?'ltr':'rtl';
+  document.querySelectorAll('[data-utvt-language]').forEach(node=>node.remove());
+  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
+  const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);
+  for(const node of nodes){
+    const raw=node.nodeValue,clean=raw.trim(),translated=dictionary[clean];
+    if(translated)node.nodeValue=raw.replace(clean,translated);
+  }
+  for(const element of document.querySelectorAll('[placeholder],[aria-label]')){
+    for(const attribute of ['placeholder','aria-label']){
+      const value=element.getAttribute(attribute);if(dictionary[value])element.setAttribute(attribute,dictionary[value]);
+    }
+  }
+  const control=document.createElement('div');
+  control.className='language-control';control.dataset.utvtLanguage='1';
+  control.innerHTML='<label><span class="sr-only">Language</span><select data-action="set-language" aria-label="Language"><option value="en">English</option><option value="ku">کوردی</option><option value="ar">العربية</option></select></label>';
+  control.querySelector('select').value=utvtLanguage;
+  const target=document.querySelector('.topbar')||document.querySelector('.login-form-wrap')||document.body;
+  target.append(control);
+}
+const utvtBaseShell=shell;
+shell=function(){utvtBaseShell();translateUTVT();};
+const utvtBaseLogin=login;
+login=function(...args){utvtBaseLogin(...args);translateUTVT();};
+document.addEventListener('change',event=>{
+  if(event.target?.dataset.action!=='set-language')return;
+  utvtLanguage=event.target.value;
+  try{localStorage.setItem('utvt-language',utvtLanguage);}catch{}
+  if(state)shell();else login(document.querySelector('#setup')!==null);
+});
+translateUTVT();
+
