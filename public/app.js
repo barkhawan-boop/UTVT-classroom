@@ -1,7 +1,7 @@
 const root=document.querySelector('#app'),modal=document.querySelector('#modal');
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const icon=n=>'<i data-lucide="'+n+'"></i>';
-const brand=()=>'<div class="brand"><div class="brand-mark">U</div><div><strong>UTVT</strong><small>Student marks</small></div></div>';
+const brand=()=>'<div class="brand"><img class="institute-logo" src="/utvt-institute-logo.png" alt="UTVT Institute logo"><div><strong>UTVT</strong><small>Institute · Student marks</small></div></div>';
 const initials=n=>String(n||'U').split(' ').map(s=>s[0]).slice(0,2).join('').toUpperCase();
 const date=v=>v?new Date(v).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'}):'—';
 const time=v=>v?new Date(v).toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'}):'';
@@ -349,4 +349,5 @@ document.addEventListener('change',event=>{
   if(state)shell();else login(document.querySelector('#setup')!==null);
 });
 translateUTVT();
+
 

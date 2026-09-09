@@ -29,3 +29,7 @@ html[dir="rtl"] .topbar .language-control{margin-right:0;margin-left:8px}
 @media(max-width:1200px){html[dir="rtl"] .main{margin-right:215px}}
 @media(max-width:700px){.language-control{top:16px;right:16px}.login-form-wrap .language-control{position:fixed}.topbar .language-control{position:static}html[dir="rtl"] .sidebar{right:0;left:auto;transform:translateX(100%)}html[dir="rtl"] .sidebar.open{transform:translateX(0)}html[dir="rtl"] .main{margin-right:0}html[dir="rtl"] .language-control{left:16px;right:auto}}
 
+.institute-logo{width:43px;height:52px;object-fit:contain;object-position:center;border-radius:8px;display:block;background:#171c50}
+.login-story .institute-logo{width:52px;height:63px;border-radius:10px;background:#171c50}
+.login-form .institute-logo{width:50px;height:60px;border-radius:10px;background:#171c50}
+@media(max-width:700px){.institute-logo{width:38px;height:46px}}
