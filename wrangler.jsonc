@@ -15,7 +15,7 @@
     {
       "binding": "DB",
       "database_name": "utvt-student-marks",
-      "database_id": "6e7f2e19-28c2-455c-bb93-5124ea45bfca",
+      "database_id": "9b1f01fd-ebb7-4e96-846c-1e8d7a962ffc",
       "migrations_dir": "migrations"
     }
   ],
@@ -29,6 +29,7 @@
     "enabled": true
   }
 }
+
 
 
 
