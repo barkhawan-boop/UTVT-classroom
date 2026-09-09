@@ -15,7 +15,7 @@
     {
       "binding": "DB",
       "database_name": "utvt-student-marks",
-      "database_id": "00000000-0000-0000-0000-000000000001",
+      "database_id": "6e7f2e19-28c2-455c-bb93-5124ea45bfca",
       "migrations_dir": "migrations"
     }
   ],
@@ -32,3 +32,4 @@
     "cpu_ms": 1000
   }
 }
+
