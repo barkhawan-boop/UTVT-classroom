@@ -33,3 +33,7 @@ html[dir="rtl"] .topbar .language-control{margin-right:0;margin-left:8px}
 .login-story .institute-logo{width:52px;height:63px;border-radius:10px;background:#171c50}
 .login-form .institute-logo{width:50px;height:60px;border-radius:10px;background:#171c50}
 @media(max-width:700px){.institute-logo{width:38px;height:46px}}
+
+@font-face{font-family:"Sarchia Baran";src:url("/fonts/Sarchia-Baran.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+html[lang="ckb"] body,html[lang="ar"] body{font-family:"Sarchia Baran",Tahoma,"Segoe UI",Arial,sans-serif}
+html[lang="ckb"] h1,html[lang="ckb"] h2,html[lang="ckb"] h3,html[lang="ckb"] h4,html[lang="ar"] h1,html[lang="ar"] h2,html[lang="ar"] h3,html[lang="ar"] h4{font-family:"Sarchia Baran",Tahoma,"Segoe UI",Arial,sans-serif;letter-spacing:0}
