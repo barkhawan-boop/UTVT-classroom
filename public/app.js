@@ -27,7 +27,7 @@ const field=(name,label,type='text',value='',extra='')=>'<label class="field"><s
 const select=(name,label,items,selected='',required=true)=>'<label class="field"><span>'+label+'</span><select name="'+name+'" '+(required?'required':'')+'><option value="">'+(required?'Select…':'Not assigned')+'</option>'+items.map(x=>'<option value="'+esc(x.id)+'" '+(String(x.id)===String(selected)?'selected':'')+'>'+esc(x.name)+'</option>').join('')+'</select></label>';
 const form=(id,content,submit='Save changes')=>'<form id="'+id+'">'+content+'<p class="error" data-error></p><div class="modal-footer"><button type="button" class="btn" data-action="close">Cancel</button><button class="btn primary">'+submit+'</button></div></form>';
 function login(setup=false,error=''){
- root.innerHTML='<div class="login"><section class="login-story">'+brand()+'<div><div class="eyebrow" style="color:#a8c3ff">YOUR CONNECTED CAMPUS</div><h1>A little more clarity.<br>A lot more <span>possibility.</span></h1><p>One place for your classes, learning materials and every step of your progress.</p><div class="login-facts"><div><strong>Learn.</strong><span>YOUR CLASSROOM, CONNECTED</span></div><div><strong>Grow.</strong><span>YOUR PROGRESS, IN FOCUS</span></div></div></div><div class="login-foot">UTVT · Academic workspace</div></section><section class="login-form-wrap"><form class="login-form" id="'+(setup?'setup':'login')+'">'+brand()+'<div class="eyebrow">'+(setup?'SET UP YOUR CAMPUS':'WELCOME TO YOUR WORKSPACE')+'</div><h2>'+(setup?'Your campus starts here.':'Good to see you again.')+'</h2><p>'+(setup?'Create the first administrator account using your private setup key.':'Sign in with the account provided by your administrator.')+'</p>'+(setup?field('token','Private setup key','password','','required autocomplete="off"')+field('name','Administrator full name','text','','required autocomplete="name"'):'')+field('username','Username','text','','required autocomplete="username" placeholder="Your full name"')+field('password','Password','password','','required autocomplete="'+(setup?'new-password':'current-password')+'" '+(setup?'minlength="12"':'')+' placeholder="'+(setup?'At least 12 characters':'Enter your password')+'"')+'<p class="error" data-error>'+esc(error)+'</p><button class="btn primary">'+(setup?'Create administrator account':'Sign in to your workspace')+icon('arrow-right')+'</button><div class="login-separator">TAKE A LOOK AROUND</div><button type="button" class="btn" data-action="demo">'+icon('layout-dashboard')+'Explore the sample workspace</button><p class="login-help">Need access? Contact your department administrator.</p></form></section></div>';renderIcons();
+ root.innerHTML='<div class="login"><section class="login-story">'+brand()+'<div><div class="eyebrow" style="color:#a8c3ff">YOUR CONNECTED CAMPUS</div><h1>Welcome to UTVT Portal</h1><p>One place for your classes, learning materials and every step of your progress.</p><div class="login-facts"><div><strong>Learn.</strong><span>YOUR CLASSROOM, CONNECTED</span></div><div><strong>Grow.</strong><span>YOUR PROGRESS, IN FOCUS</span></div></div></div><div class="login-foot">UTVT · Academic workspace</div></section><section class="login-form-wrap"><form class="login-form" id="'+(setup?'setup':'login')+'">'+brand()+'<div class="eyebrow">'+(setup?'SET UP YOUR CAMPUS':'WELCOME TO YOUR WORKSPACE')+'</div><h2>'+(setup?'Your campus starts here.':'Good to see you again.')+'</h2><p>'+(setup?'Create the first administrator account using your private setup key.':'Sign in with the account provided by your administrator.')+'</p>'+(setup?field('token','Private setup key','password','','required autocomplete="off"')+field('name','Administrator full name','text','','required autocomplete="name"'):'')+field('username','Username','text','','required autocomplete="username" placeholder="Your full name"')+field('password','Password','password','','required autocomplete="'+(setup?'new-password':'current-password')+'" '+(setup?'minlength="12"':'')+' placeholder="'+(setup?'At least 12 characters':'Enter your password')+'"')+'<p class="error" data-error>'+esc(error)+'</p><button class="btn primary">'+(setup?'Create administrator account':'Sign in to your workspace')+icon('arrow-right')+'</button><div class="login-separator">TAKE A LOOK AROUND</div><button type="button" class="btn" data-action="demo">'+icon('layout-dashboard')+'Explore the sample workspace</button><p class="login-help">Need access? Contact your department administrator.</p></form></section></div>';renderIcons();
 }
 function navigation(){
  const role=state.me.role;
@@ -231,7 +231,7 @@ await boot();
 const UTVT_TRANSLATIONS = {
   ar: {
     "Student marks":"درجات الطلاب","WELCOME TO YOUR WORKSPACE":"مرحبًا بك في مساحة العمل",
-    "SET UP YOUR CAMPUS":"إعداد مؤسستك","Good to see you again.":"سعيدون برؤيتك مجددًا.",
+    "SET UP YOUR CAMPUS":"إعداد مؤسستك","Welcome to UTVT Portal":"مرحبًا بكم في بوابة UTVT","Good to see you again.":"سعيدون برؤيتك مجددًا.",
     "Your campus starts here.":"تبدأ مؤسستك من هنا.","Sign in with the account provided by your administrator.":"سجّل الدخول بالحساب الذي أنشأه المسؤول.",
     "Create the first administrator account using your private setup key.":"أنشئ أول حساب مسؤول باستخدام مفتاح الإعداد الخاص.",
     "Private setup key":"مفتاح الإعداد الخاص","Administrator full name":"الاسم الكامل للمسؤول","Username":"اسم المستخدم","Password":"كلمة المرور",
@@ -273,7 +273,7 @@ const UTVT_TRANSLATIONS = {
   },
   ku: {
     "Student marks":"نمرەکانی خوێندکاران","WELCOME TO YOUR WORKSPACE":"بەخێربێیت بۆ شوێنی کارەکەت",
-    "SET UP YOUR CAMPUS":"دامەزراندنی پەیمانگاکەت","Good to see you again.":"خۆشحاڵین بە دووبارە بینینت.",
+    "SET UP YOUR CAMPUS":"دامەزراندنی پەیمانگاکەت","Welcome to UTVT Portal":"بەخێربێن بۆ پۆرتاڵی UTVT","Good to see you again.":"خۆشحاڵین بە دووبارە بینینت.",
     "Your campus starts here.":"پەیمانگاکەت لێرە دەست پێدەکات.","Sign in with the account provided by your administrator.":"بە هەژمارەکەی بەڕێوەبەر بچۆ ژوورەوە.",
     "Create the first administrator account using your private setup key.":"یەکەم هەژماری بەڕێوەبەر بە کلیلە تایبەتەکەت دروست بکە.",
     "Private setup key":"کلیلە تایبەتی ڕێکخستن","Administrator full name":"ناوی تەواوی بەڕێوەبەر","Username":"ناوی بەکارهێنەر","Password":"وشەی نهێنی",
@@ -349,5 +349,6 @@ document.addEventListener('change',event=>{
   if(state)shell();else login(document.querySelector('#setup')!==null);
 });
 translateUTVT();
+
 
 
